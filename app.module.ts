@@ -15,6 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 import { VentasComponent } from './ventas/ventas.component';
 
 import {Routes, RouterModule} from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 //Links, aqui se crean los enlaces para usar en el codigo con la etiqueta href="/#$@&%"
 const appRoutes: Routes = [
@@ -25,7 +26,8 @@ const appRoutes: Routes = [
   {path: 'Supplier', component: SupplierComponent},
   {path: 'Estadisticas', component: EstadisticasComponent},
   {path: 'Ventas', component: VentasComponent},
-  {path: 'consDeudas', component: CuentasComponent}
+  {path: 'consDeudas', component: CuentasComponent},
+  {path: '**', component: HomeComponent}
 ];
 
 @NgModule({
@@ -39,7 +41,8 @@ const appRoutes: Routes = [
     CuentasComponent,
     EstadisticasComponent,
     FooterComponent,
-    VentasComponent
+    VentasComponent,
+    HomeComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
